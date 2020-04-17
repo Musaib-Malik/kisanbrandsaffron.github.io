@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap');
+
 
 * {
     margin: 0;
@@ -27,11 +31,12 @@ header {
 #header-title {
     font-family: Comfortaa;
     color: white;
-    padding-top: 0.7em;
+    padding: 0.7em 10px;
     position: relative;
     animation: header-title-animation;
     animation-duration: 3s;
     transition: ease-in-out;
+
 }
 
 /* Adding animation to the title */
@@ -50,7 +55,7 @@ header {
 
     font-size: 15px;
     margin-left: 0;
-    margin-top: 1em;
+    margin-top: 0.2em;
     font-family: Montserrat;
     color: mediumseagreen;
     font-weight: 700;
@@ -62,6 +67,8 @@ header {
     transition: all ease-in-out;
     opacity: 0;
     animation-fill-mode: forwards;
+
+
 }
 
 @keyframes header-para {
@@ -86,10 +93,13 @@ header {
 .main-para {
     color: #fff;
     text-align: justify;
-    font-family: Bahnschrift;
-    line-height: 2.5em;
+    font-family: Open Sans;
+
+    line-height: 2em;
+    margin: 0 12px;
     text-align: justify;
-    padding: 3em 1em;
+    padding: 3em 0.5em;
+
 
 
 }
@@ -114,8 +124,7 @@ header {
 
 .secondary-div {
     width: 100%;
-    height: 45vh;
-
+    height: 50vh;
 
     display: flex;
     flex-direction: column;
@@ -132,16 +141,17 @@ header {
 .inner-div2 {
 
     width: 100%;
-    height: 50vh;
+    height: 10vh;
     margin: 0px auto;
 
 }
 
 .inner-div2-para {
-    padding: 10px 12px;
+    padding: 10px 5px;
     font-family: Montserrat;
+
     text-align: center;
-    line-height: 1.6em;
+    line-height: 2em;
     font-weight: 500;
     color: white;
     animation: inner-div2-animation;
@@ -175,7 +185,7 @@ header {
 
 .sub-main {
     margin-top: 3em;
-    height: 70vh;
+    height: 90vh;
     background-color: #ddd;
     display: flex;
     flex-direction: column;
@@ -185,8 +195,8 @@ header {
 
 .image1 {
     background: url('images/img1.jpeg');
-    width: 40%;
-    height: 40vh;
+    width: 50%;
+    height: 200vh;
     background-position: center;
     background-size: cover;
     margin-top: 2em;
@@ -195,8 +205,8 @@ header {
 
 .image2 {
     background: url('images/img10.jpeg');
-    width: 40%;
-    height: 40vh;
+    width: 50%;
+    height: 200vh;
     background-position: center;
     background-size: cover;
     margin-bottom: 2em;
@@ -204,8 +214,8 @@ header {
 
 .image3 {
     background: url('images/img9.jpg');
-    width: 40%;
-    height: 40vh;
+    width: 50%;
+    height: 200vh;
     background-position: center;
     background-size: cover;
     margin-bottom: 2em;
@@ -213,8 +223,8 @@ header {
 
 .image4 {
     background: url('images/img8.jpg');
-    width: 40%;
-    height: 40vh;
+    width: 50%;
+    height: 200vh;
     background-position: center;
     background-size: cover;
     margin-bottom: 2em;
@@ -223,5 +233,204 @@ header {
 .footer-title {
     font-family: Montserrat;
     text-align: center;
+
+}
+
+.foot {
+    position: sticky;
+    width: 100%;
+    height: 25vh;
+    margin-top: 3em;
+    background-color: slateblue;
+}
+
+.fa.fa-whatsapp,
+.fa.fa-envelope,
+.fa.fa-phone {
+
+    display: inline-block;
+    margin: 0.5em;
+
+
+}
+
+
+.whatsapp-icon,
+.email-icon,
+.phone-icon {
+    display: inline-block;
+    padding: 10px 12px;
+    font-family: Bahnschrift;
+
+}
+
+@media (min-width: 320) {
+    .secondary-div {
+        height: 50vh;
+    }
+}
+
+
+@media (min-width: 768px) {
+
+    .main-para {
+        font-size: 20px;
+    }
+
+
+    .para-container {
+        max-width: 80%;
+    }
+
+    .secondary-div {
+        height: 43vh;
+    }
+
+    .inner-div2 {
+        max-width: 60%;
+        line-height: 2.5em;
+        text-align: justify;
+
+    }
+
+    .inner-div2-para {
+        font-size: 20px;
+    }
+
+    .sub-main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        width: 34%;
+        height: 30vh;
+    }
+
+    .image2 {
+        position: relative;
+        top: 1em;
+    }
+
+}
+
+@media (min-width: 1024px) {
+    .main-para {
+        font-size: 25px;
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+
+    .para-container {
+        max-width: 70%;
+    }
+
+    .secondary-div {
+        height: 45vh;
+    }
+
+    .inner-div2-para {
+        font-size: 25px;
+    }
+
+    .inner-div2 {
+        max-width: 50%;
+        line-height: 2.5em;
+        text-align: justify;
+
+    }
+
+    .sub-main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        width: 34%;
+        height: 25vh;
+    }
+
+    .image2 {
+        position: relative;
+        top: 1em;
+    }
+
+    .foot {
+        height: 15vh;
+    }
+
+    .whatsapp-icon,
+    .email-icon,
+    .phone-icon {
+        font-size: 30px;
+    }
+
+}
+
+@media (min-width: 1100px) {
+    .main-para {
+        font-size: initial;
+    }
+
+    .para-container {
+        max-width: 55%;
+    }
+
+    .secondary-div {
+        height: 50vh;
+    }
+
+
+
+    .inner-div2 {
+        max-width: 40%;
+        line-height: 2.5em;
+        text-align: justify;
+
+    }
+
+    .sub-main {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+
+    }
+
+    .image1,
+    .image2,
+    .image3,
+    .image4 {
+        width: 35%;
+        height: 40vh;
+    }
+
+    .image2 {
+        position: relative;
+        top: 1em;
+    }
+
+    .foot {
+        height: 25vh;
+
+    }
+
+    .whatsapp-icon,
+    .email-icon,
+    .phone-icon {
+        font-size: 20px;
+    }
+
 
 }
