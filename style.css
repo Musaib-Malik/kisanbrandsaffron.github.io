@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
 
 * {
     margin: 0;
@@ -65,8 +65,10 @@ header {
     }
 }
 
-.main {
-    position: relative;
+
+
+
+.para-container {
 
     line-height: 2em;
     font-family: Montserrat;
@@ -76,18 +78,13 @@ header {
     animation-name: main-para-animation;
     transition: all ease-in-out;
     animation-duration: 3s;
-
     width: 100%;
 
 }
 
-
-#para-container {
-    margin-top: 2em;
-}
-
 .main-para {
     color: #fff;
+    margin-top: 3em;
     padding: 1em;
     border-radius: 1em;
     font-weight: 600;
@@ -107,21 +104,22 @@ header {
 
 @media (max-width: 750px) {
 
-    .main {
+    .para-container {
         min-width: 100%;
+
 
     }
 }
 
-@media(max-width: 1050px) {
-    .main {
+@media(max-width: 1024px) {
+    .para-container {
         max-width: 90%;
     }
 }
 
 
 @media (max-width: 2000px) {
-    .main {
+    .para-container {
         max-width: 55%;
 
     }
@@ -133,4 +131,4 @@ header {
     font-family: Montserrat;
     font-weight: 700;
     color: #3a3a3a;
-}
+} */

@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #eee;
+}
+
+/* Styling the header */
+header {
+    text-align: center;
+    background-color: #eee;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('images/2.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    z-index: 1000;
+
+}
+
+
+#header-title {
+    font-family: Comfortaa;
+    color: white;
+    padding-top: 0.7em;
+    position: relative;
+    animation: header-title-animation;
+    animation-duration: 3s;
+    transition: ease-in-out;
+}
+
+/* Adding animation to the title */
+@keyframes header-title-animation {
+    0% {
+        top: -100px;
+    }
+
+    100% {
+        top: 0;
+    }
+}
+
+
+#header-para {
+
+    font-size: 15px;
+    margin-left: 0;
+    margin-top: 1em;
+    font-family: Montserrat;
+    color: mediumseagreen;
+    font-weight: 700;
+    word-spacing: 8px;
+
+    animation-name: header-para;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    transition: all ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes header-para {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.para-container {
+    position: relative;
+    width: 100%;
+    margin: 0px auto;
+    animation-name: main-para-animation;
+    transition: all ease-in-out;
+    animation-duration: 3s;
+}
+
+.main-para {
+    color: #fff;
+    text-align: justify;
+    font-family: Bahnschrift;
+    line-height: 2.5em;
+    text-align: justify;
+    padding: 3em 1em;
+
+
+}
+
+@keyframes main-para-animation {
+    0% {
+        left: -2000px
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+/* Styling the main area */
+
+#secondary-title {
+    text-align: center;
+    font-family: Montserrat;
+
+}
+
+.secondary-div {
+    width: 100%;
+    height: 45vh;
+
+
+    display: flex;
+    flex-direction: column;
+
+    margin: 0px auto;
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url('images/img9.jpg');
+    background-position: center;
+    background-size: cover;
+
+}
+
+
+
+.inner-div2 {
+
+    width: 100%;
+    height: 50vh;
+    margin: 0px auto;
+
+}
+
+.inner-div2-para {
+    padding: 10px 12px;
+    font-family: Montserrat;
+    text-align: center;
+    line-height: 1.6em;
+    font-weight: 500;
+    color: white;
+    animation: inner-div2-animation;
+    animation-delay: 3s;
+    animation-duration: 3s;
+    transition: ease-in-out;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes inner-div2-animation {
+
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+
+}
+
+.sub-main-breakpoint {
+    margin-top: 3em;
+}
+
+.sub-main-title {
+    text-align: center;
+    font-family: Montserrat;
+}
+
+.sub-main {
+    margin-top: 3em;
+    height: 70vh;
+    background-color: #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.image1 {
+    background: url('images/img1.jpeg');
+    width: 40%;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.image2 {
+    background: url('images/img10.jpeg');
+    width: 40%;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2em;
+}
+
+.image3 {
+    background: url('images/img9.jpg');
+    width: 40%;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2em;
+}
+
+.image4 {
+    background: url('images/img8.jpg');
+    width: 40%;
+    height: 40vh;
+    background-position: center;
+    background-size: cover;
+    margin-bottom: 2em;
+}
+
+.footer-title {
+    font-family: Montserrat;
+    text-align: center;
+}
