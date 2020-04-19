@@ -31,6 +31,7 @@ header {
 #header-title {
     font-family: Comfortaa;
     color: white;
+
     padding: 0.7em 10px;
     position: relative;
     animation: header-title-animation;
@@ -119,6 +120,7 @@ header {
 #secondary-title {
     text-align: center;
     font-family: Montserrat;
+    font-size: 40px;
 
 }
 
@@ -181,6 +183,7 @@ header {
 .sub-main-title {
     text-align: center;
     font-family: Montserrat;
+    font-size: 40px;
 }
 
 .sub-main {
@@ -233,6 +236,7 @@ header {
 .footer-title {
     font-family: Montserrat;
     text-align: center;
+    font-size: 40px;
 
 }
 
