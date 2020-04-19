@@ -338,6 +338,7 @@ header {
 
     .inner-div2-para {
         font-size: 25px;
+
     }
 
     .inner-div2 {
@@ -381,11 +382,12 @@ header {
 
 @media (min-width: 1100px) {
     .main-para {
-        font-size: initial;
+        font-size: 1.2rem;
+
     }
 
     .para-container {
-        max-width: 55%;
+        max-width: 50%;
     }
 
     .secondary-div {
