@@ -3,6 +3,12 @@
 @import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css";
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital@1&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Sacramento&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
 * {
   margin: 0;
@@ -27,7 +33,7 @@ header {
 }
 
 #header-title {
-  font-family: Comfortaa;
+  font-family: Comfortaa, sans-serif;
   color: white;
 
   padding: 0.7em 10px;
@@ -52,7 +58,7 @@ header {
   font-size: 15px;
   margin-left: 0;
   margin-top: 0.2em;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   color: mediumseagreen;
   font-weight: 700;
   word-spacing: 8px;
@@ -109,7 +115,7 @@ header {
 
 #secondary-title {
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 40px;
 }
 
@@ -135,7 +141,7 @@ header {
 
 .inner-div2-para {
   padding: 10px 5px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
 
   text-align: center;
   line-height: 2em;
@@ -165,7 +171,7 @@ header {
 
 .sub-main-title {
   text-align: center;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   font-size: 40px;
 }
 
@@ -216,7 +222,7 @@ header {
 }
 
 .footer-title {
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
   text-align: center;
   font-size: 40px;
 }
@@ -241,7 +247,7 @@ header {
 .phone-icon {
   display: inline-block;
   padding: 10px 12px;
-  font-family: Bahnschrift;
+  font-family: Bahnschrift, sans-serif;
 }
 
 @media (min-width: 320) {
