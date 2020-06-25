@@ -16,6 +16,7 @@
 /* Base Styling */
 
 body {
+	overflow-y: auto;
 	overflow-x: hidden;
 	background-color: #111;
 }
