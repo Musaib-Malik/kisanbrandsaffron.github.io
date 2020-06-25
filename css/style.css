@@ -1,0 +1,848 @@
+/* Font Imports */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+/* CSS Reset */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+
+/* Base Styling */
+
+body {
+	overflow-x: hidden;
+	background-color: #111;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Utility Classes */
+.py-1 {
+	padding: 1.5rem 0;
+}
+
+.py-2 {
+	padding: 2 0;
+}
+
+.py-3 {
+	padding: 3rem 0;
+}
+
+.p-1 {
+	padding: 1rem;
+}
+
+.p-2 {
+	padding: 2rem;
+}
+
+.p-3 {
+	padding: 3rem;
+}
+
+.my-1 {
+	margin: 1.5rem 0;
+}
+
+.my-2 {
+	margin: 2 0;
+}
+
+.my-3 {
+	margin: 3rem 0;
+}
+
+.m-1 {
+	margin: 1rem;
+}
+
+.m-2 {
+	margin: 2rem;
+}
+
+.m-3 {
+	margin: 3rem;
+}
+
+/* Rotate Icon Class */
+#nav-bar > #ham-wrapper > .rotate {
+	transform: rotate(135deg);
+}
+
+#nav-bar > #ham-wrapper > .rotate::before,
+#nav-bar > #ham-wrapper > .rotate::after {
+	top: 0;
+	transform: rotate(90deg);
+}
+
+/* Un-rotate Icon Class */
+#nav-bar > #ham-wrapper > .un-rotate {
+	transform: rotate(0);
+}
+
+#nav-bar > #ham-wrapper > .un-rotate::before,
+#nav-bar > #ham-wrapper > .un-rotate::after {
+	top: 10;
+	transform: rotate(0);
+}
+
+/* Re-transform Side Bar */
+#nav-bar #re-transform {
+	transform: translateX(0%);
+}
+
+/* Animations */
+#nav-bar .list-items-container ul li .nav-links-animation {
+	animation: animate-nav-links 0.5s linear forwards;
+	animation-delay: 0.45s;
+}
+
+#nav-bar > #ham-wrapper {
+	opacity: 0;
+	transform: translateX(90%);
+	animation: animate-ham-wrapper 0.8s ease forwards;
+}
+
+#nav-bar > #wide-screen-nav {
+	opacity: 0;
+	transform: translateY(-15%);
+	animation: animate-wide-screen-nav 1s linear forwards;
+}
+
+.container > h1 {
+	transform: translateY(-1.5%);
+	opacity: 0;
+	animation: animate-main-header 1s linear forwards;
+	animation-delay: 0.9s;
+}
+
+.container > p {
+	opacity: 0;
+	animation: animate-slogan 1s linear forwards;
+	animation-delay: 1.9s;
+}
+
+/* Header */
+header {
+	height: 100vh;
+}
+
+/* Header Overlay */
+header::before {
+	content: '';
+	background: url('../images/bg.jpg') no-repeat center center/cover;
+	background-color: rgba(0, 0, 0, 0.8);
+	background-blend-mode: multiply;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}
+
+/* Navbar: (Mobile & Tablet) */
+#nav-bar {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+#wide-screen-nav {
+	display: none;
+}
+
+#nav-bar .list-items-container {
+	background: #111;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100vh;
+	width: 55%;
+	transform: translateX(100%);
+	transition: transform 0.45s ease;
+	z-index: 10;
+}
+
+#nav-bar .list-items-container ul {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	align-items: center;
+	height: 90%;
+}
+
+#nav-bar .list-items-container ul li {
+	padding: 1rem;
+}
+
+#nav-bar .list-items-container ul li a {
+	color: #aab5d5;
+	font-family: Poppins;
+	font-weight: 600;
+	transition: all 300ms linear;
+	opacity: 0;
+	font-size: 1.1rem;
+}
+
+#nav-bar .list-items-container ul li a:hover {
+	color: white;
+}
+
+/* Hamburger Icon Making  */
+#nav-bar #ham-wrapper {
+	z-index: 11;
+	width: 60px;
+	height: 60px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+#nav-bar #ham-wrapper > div {
+	width: 100%;
+	height: 4px;
+	background-color: white;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 3px;
+	transition: all 0.4s ease;
+}
+
+#nav-bar #ham-wrapper > div::before,
+#nav-bar #ham-wrapper > div::after {
+	content: '';
+	position: absolute;
+	top: -10px;
+	width: 100%;
+	height: 4px;
+	background-color: white;
+	z-index: 1;
+	border-radius: 3px;
+}
+
+#nav-bar #ham-wrapper > div::after {
+	top: 10px;
+}
+
+/* Navbar: (Widescreen) */
+#wide-screen-nav li {
+	padding: 0.8rem 1.3rem;
+}
+
+#wide-screen-nav li a {
+	color: #aab5d5;
+	text-decoration: none;
+	font-family: 'roboto Mono';
+	font-weight: bolder;
+	transition: all 200ms linear;
+	font-size: 1.2rem;
+	margin-right: 1.3rem;
+}
+
+#wide-screen-nav li a:hover {
+	color: white;
+}
+
+/* Showcase */
+.container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	height: 75%;
+	z-index: -10;
+}
+
+.container > h1 {
+	color: #b6bfdc;
+	font-family: Montserrat;
+	font-size: 1.9rem;
+}
+
+.container > p {
+	color: #8892b0;
+	font-family: Asap;
+	font-size: 1.2rem;
+	font-weight: bolder;
+	margin-top: 0.7rem;
+}
+
+/* Section: (Who We Are) */
+#about {
+	height: auto;
+	text-align: center;
+}
+
+#about .text-container {
+	background: #111;
+	padding: 1rem;
+}
+
+#about .image-container {
+	background: url('../images/road-nature-sunny-vintage-108444.jpg') no-repeat
+		center center/cover;
+}
+
+#about h1 {
+	padding: 1rem;
+	font-family: Calibri;
+	font-weight: bolder;
+	color: #8892b0;
+	font-size: 2rem;
+	text-align: center;
+}
+
+#about p {
+	line-height: 2.2;
+	font-size: 1rem;
+	font-family: Asap;
+	color: white;
+}
+
+/* Gap */
+.gap {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 20vh;
+	background-color: #aab5d5;
+}
+
+.gap > h2 {
+	font-family: Sacramento;
+	font-size: 2.2rem;
+	color: black;
+}
+
+/* Section: (What We Do) */
+#works {
+	background-color: #111;
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+#works h1 {
+	padding: 1rem;
+	font-family: Calibri;
+	font-weight: bolder;
+	color: #8892b0;
+	font-size: 2rem;
+	text-align: center;
+}
+
+#works p {
+	line-height: 2.2;
+	font-size: 1rem;
+	font-family: Asap;
+	color: white;
+}
+
+#works .grid-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	height: 100%;
+	width: 100%;
+	margin-top: 2.5rem;
+}
+
+#works .grid-container .grid-item {
+	width: 90%;
+	margin: 1rem auto;
+	height: 40vh;
+	border-radius: 4px;
+}
+
+#item-1 {
+	background: url('../images/img2.jpeg') center center/cover;
+}
+
+#item-2 {
+	background: url('../images/img9.jpg') center center/cover;
+}
+
+#item-3 {
+	background: url('../images/img10.jpeg') center center/cover;
+}
+
+#item-4 {
+	background: url('../images/img8.jpg') center center/cover;
+}
+
+/* Footer: (Contact) */
+footer {
+	margin-top: 3rem;
+	width: 100%;
+	background-color: #007fff;
+}
+
+footer h1 {
+	text-align: center;
+	font-family: Montserrat;
+	font-size: 2.2rem;
+	color: black;
+}
+
+.foot {
+	margin-top: 1rem;
+}
+
+.foot div {
+	padding: 0.75rem;
+}
+
+.foot div span {
+	font-family: Asap;
+	font-weight: bold;
+	margin-left: 0.5rem;
+}
+
+/* Keyframes */
+@keyframes animate-nav-links {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes animate-main-header {
+	0% {
+		opacity: 0;
+		transform: translateX(-1.5%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes animate-ham-wrapper {
+	0% {
+		opacity: 0;
+		transform: translateX(90%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes animate-slogan {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes animate-wide-screen-nav {
+	from {
+		opacity: 0;
+		transform: translateY(-15%);
+	}
+
+	to {
+		opacity: 1;
+		transform: translateY(0%);
+	}
+}
+
+/* Mobile View: (Landscape) */
+@media (max-height: 568px) {
+	.container {
+		height: 71%;
+	}
+
+	.container > h1 {
+		font-size: 1.6rem;
+	}
+
+	.container p {
+		font-size: 1rem;
+	}
+
+	#about p {
+		line-height: 2.5;
+		text-align: center;
+	}
+
+	.gap > h2 {
+		font-size: 1.9rem;
+	}
+}
+
+/* Tablet View: (Potrait) */
+@media (min-width: 768px) and (max-width: 1023px) {
+	#nav-bar #ham-wrapper {
+		margin: 1rem;
+	}
+
+	#nav-bar .list-items-container ul li {
+		padding: 1.3rem;
+	}
+
+	#nav-bar .list-items-container ul li a {
+		font-size: 1.5rem;
+	}
+
+	.container {
+		height: 80%;
+	}
+
+	.container > h1 {
+		font-size: 3.3rem;
+	}
+
+	.container > p {
+		font-size: 1.7rem;
+		margin-top: 1rem;
+	}
+
+	#about {
+		display: flex;
+	}
+
+	#about div {
+		flex: 1;
+	}
+
+	#about .text-container {
+		padding-top: 2.3rem;
+	}
+
+	#about h1 {
+		font-size: 2.6rem;
+		text-align: left;
+	}
+
+	#about p {
+		text-align: left;
+		margin-left: 20px;
+		line-height: 2.5;
+	}
+
+	.gap h2 {
+		font-size: 3rem;
+	}
+
+	.main-container {
+		display: flex;
+	}
+
+	.main-container div {
+		flex: 1;
+	}
+
+	.main-container .text-container {
+		border-bottom: 1px white solid;
+	}
+
+	.image-container {
+		background: url('../images/the-road-815297_1920.jpg') no-repeat center
+			center/cover;
+	}
+
+	#works h1 {
+		font-size: 2.6rem;
+		text-align: left;
+	}
+
+	#works p {
+		text-align: left;
+		margin-left: 20px;
+		line-height: 2.5;
+	}
+
+	#works .grid-container {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#works .grid-container .grid-item {
+		width: 90%;
+		margin: 1rem auto;
+		height: 30vh;
+		border-radius: 4px;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+	footer h1 {
+		font-weight: bolder;
+		font-size: 2.6rem;
+	}
+
+	.foot .fa {
+		font-size: 1.4rem;
+	}
+
+	.foot span {
+		font-size: 1.3rem;
+	}
+}
+
+/* Widescreen View */
+@media (min-width: 1024px) and (max-width: 1100px) {
+	#nav-bar #ham-wrapper,
+	#nav-bar .list-items-container {
+		display: none;
+	}
+
+	#wide-screen-nav {
+		display: flex;
+	}
+
+	.container {
+		height: 80%;
+	}
+
+	.container > h1 {
+		font-size: 4.4rem;
+	}
+
+	.container p {
+		font-size: 2rem;
+		margin-top: 0.8rem;
+	}
+
+	#about {
+		display: flex;
+		height: auto;
+	}
+
+	#about div {
+		flex: 1;
+	}
+
+	#about .text-container {
+		padding-top: 2.3rem;
+	}
+
+	#about h1 {
+		font-size: 2.6rem;
+		text-align: left;
+	}
+
+	#about p {
+		text-align: left;
+		margin-left: 20px;
+		line-height: 2.5;
+		font-size: 1.3rem;
+	}
+
+	.gap h2 {
+		font-size: 4.5rem;
+	}
+
+	#works {
+		text-align: left;
+	}
+
+	#works h1 {
+		font-size: 2.6rem;
+		text-align: left;
+	}
+
+	#works p {
+		margin-left: 20px;
+		line-height: 2.2;
+		font-size: 1.3rem;
+	}
+
+	.main-container {
+		display: flex;
+	}
+
+	.main-container div {
+		flex: 1;
+		height: 30vh;
+	}
+
+	.main-container .text-container {
+		border-bottom: 1px white solid;
+	}
+
+	.image-container {
+		background: url('../images/the-road-815297_1920.jpg') no-repeat center
+			center/cover;
+	}
+
+	#works .grid-container {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#works .grid-container .grid-item {
+		width: 90%;
+		margin: 1rem auto;
+		height: 30vh;
+		border-radius: 4px;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+	footer h1 {
+		font-weight: bolder;
+		font-size: 3rem;
+	}
+
+	.foot .fa {
+		font-size: 1.6rem;
+	}
+
+	.foot span {
+		font-size: 1.5rem;
+	}
+}
+
+@media (min-width: 1100px) {
+	.container > h1 {
+		font-size: 4rem;
+	}
+
+	#nav-bar #ham-wrapper,
+	#nav-bar .list-items-container {
+		display: none;
+	}
+
+	#wide-screen-nav {
+		display: flex;
+	}
+
+	.container {
+		height: 70%;
+	}
+
+	.container p {
+		font-size: 1.5rem;
+		margin-top: 0.8rem;
+	}
+
+	#about {
+		display: flex;
+		height: 45vh;
+	}
+
+	#about div {
+		flex: 0.7;
+	}
+
+	#about .image-container {
+		background: url('../images/road-nature-sunny-vintage-108444.jpg') center
+			center/cover;
+		flex: 0.45;
+	}
+
+	#about .text-container {
+		padding-top: 2.3rem;
+	}
+
+	#about h1 {
+		font-size: 2.6rem;
+		text-align: left;
+	}
+
+	#about p {
+		margin-left: 20px;
+		line-height: 2.2;
+		width: 80%;
+		font-size: 1.2rem;
+		text-align: left;
+	}
+
+	.gap h2 {
+		font-size: 3.5rem;
+	}
+
+	#works {
+		text-align: left;
+	}
+
+	#works h1 {
+		font-size: 2.6rem;
+		text-align: left;
+	}
+
+	#works p {
+		margin-left: 20px;
+		line-height: 2.2;
+		font-size: 1.3rem;
+		width: 80%;
+	}
+
+	.main-container {
+		display: flex;
+	}
+
+	.main-container div {
+		flex: 0.7;
+		height: 45vh;
+	}
+
+	.main-container .image-container {
+		flex: 0.45;
+	}
+
+	.main-container .text-container {
+		border-bottom: 1px white solid;
+	}
+
+	.image-container {
+		background: url('../images/the-road-815297_1920.jpg') no-repeat center
+			center/cover;
+	}
+
+	#works .grid-container {
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+	}
+
+	#works .grid-container .grid-item {
+		width: 90%;
+		margin: 1rem auto;
+		height: 40vh;
+		border-radius: 4px;
+	}
+
+	footer {
+		text-align: center;
+	}
+
+	footer h1 {
+		font-weight: bolder;
+		font-size: 3rem;
+	}
+
+	.foot .fa {
+		font-size: 1.4rem;
+	}
+
+	.foot span {
+		font-size: 1.3rem;
+	}
+}
