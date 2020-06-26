@@ -275,7 +275,7 @@ header::before {
 .container > h1 {
 	color: #b6bfdc;
 	font-family: Montserrat;
-	font-size: 2rem;
+	font-size: 1.8rem;
 }
 
 .container > p {
@@ -324,13 +324,22 @@ header::before {
 	justify-content: center;
 	align-items: center;
 	height: 20vh;
+	flex-direction: column;
 	background-color: #aab5d5;
+	color: black;
 }
 
 .gap > h2 {
 	font-family: Sacramento;
 	font-size: 2.2rem;
 	color: black;
+}
+
+.gap > p {
+	color: black;
+	font-family: asap;
+	font-weight: bolder;
+	font-size: 1rem;
 }
 
 /* Section: (What We Do) */
@@ -393,10 +402,10 @@ footer {
 	margin-top: 3rem;
 	width: 100%;
 	background-color: #007fff;
+	text-align: center;
 }
 
 footer h1 {
-	text-align: center;
 	font-family: Montserrat;
 	font-size: 2.2rem;
 	color: black;
